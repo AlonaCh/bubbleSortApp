@@ -9,7 +9,23 @@ function App() {
   }
 
   function bubble() {
-
+    const numbers = inputValue.split(',').map(Number);// Convert string to array of numbers
+    const numbersLength = numbers.length;
+    if (inputValue) {
+      for (let i = numbersLength; i > 0; i--) {
+        for (let j = 0; j < i - 1; j++) {
+          if (numbers[j] > numbers[j + 1]) {
+            // swap numbers
+            let temp = numbers[j];
+            numbers[j] = numbers[j + 1];
+            numbers[j + 1] = temp;
+          }
+        }
+      }
+      return numbers.toString();
+    } else {
+      return "Give numbers"
+    }
 
   }
 
@@ -20,7 +36,7 @@ function App() {
           <h1>Bubble Sort App</h1>
           <input id="search"
             type="text"
-            placeholder="Enter word or number" onClick={bubbleSortHandler} />
+            placeholder="Enter numbers separated by comma" onChange={bubbleSortHandler} />
           <p>{bubble()}</p>
         </div>
       </div>
