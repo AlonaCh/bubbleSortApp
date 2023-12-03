@@ -24,14 +24,14 @@ function App() {
       }
       return numbers.toString();
     } else {
-      return "Give numbers"
+      return "Put numbers please"
     }
 
   }
 
   return (
     <>
-      <div>
+      <div className='container'>
         <div className="inputValue">
           <h1>Bubble Sort App</h1>
           <input id="search"
