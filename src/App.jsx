@@ -31,12 +31,12 @@ function App() {
 
   return (
     <>
-      <div className='container'>
+      <div className="container">
         <div className="inputValue">
           <h1>Bubble Sort App</h1>
-          <input id="search"
+          <textarea id="search"
             type="text"
-            placeholder="Enter numbers separated by comma" onChange={bubbleSortHandler} />
+            placeholder="Enter numbers separated by comma" onChange={bubbleSortHandler} ></textarea>
           <p>{bubble()}</p>
         </div>
       </div>
